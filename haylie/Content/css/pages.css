@@ -1,0 +1,45 @@
+﻿/*---===========================================================================================================-------[ welcome.iot ]==-------*/
+#box_pages.block_pages #page_welcome {
+    background: rgba(0,0,0,.9);padding: 3.4px 0px;padding-top: 5.4px;
+}
+#box_pages.block_pages #page_welcome p 
+{ font-family: monospace; color: #eee; text-align: center; letter-spacing: 12px; position: relative; font-size: 8.1px;
+  border: 1px solid; padding: 7px 2px; margin: 7px;
+}
+#box_pages.block_pages #page_welcome p span.iot 
+{ font-family: Tahoma; color: #fc0; text-align: center; letter-spacing: 16px; font-weight: 600; }
+
+/*---===========================================================================================================-------[ welcome.iot ]==-------*/
+#box_pages.block_pages #page_spotlight {
+    background: rgba(0,0,0,.9);padding: 3.4px 0px;padding-top: 5.4px;
+}
+#box_pages.block_pages #page_spotlight p 
+{ font-family: monospace; color: #eee; text-align: center; letter-spacing: 12px; position: relative; font-size: 8.1px;
+  border: 1px solid; padding: 7px 2px; margin: 7px;
+}
+#box_pages.block_pages #page_spotlight p span.light 
+{ font-family: Tahoma; color: #fc0; text-align: center; letter-spacing: 16px; font-weight: 600; }
+
+
+/*---===========================================================================================================-------[ features ]==-------*/
+#box_pages.block_pages #page_features {
+    background: rgba(255,255,255,.9);padding: 3.4px 0px;padding-top: 5.4px; 
+}
+#box_pages.block_pages #page_features > div {
+    position: relative; top: 0; float: left; overflow: hidden;
+}
+#box_pages.block_pages #page_features .left {
+    max-width: 30%;
+}
+#box_pages.block_pages #page_features .left img { width: 81px; padding: 16px; }
+#box_pages.block_pages #page_features .right {
+    float: right; max-width: 70%; background: #fff;
+}
+#box_pages.block_pages #page_features .right p {
+    width: 90%; font-size: 8px; margin-top: 9px;
+}
+#box_pages.block_pages #page_features .right  p span.iot 
+{ font-family: Tahoma; color: #999; text-align: center; letter-spacing: 3.4px; }
+
+
+

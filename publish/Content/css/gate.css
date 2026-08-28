@@ -1,0 +1,158 @@
+#box_login input::placeholder {  color: #eee; }
+#box_login input:-internal-autofill-selected { background: transparent; color: #fff; }
+
+#box_login #frm_login { font-family: mysans; color: #fff; opacity: 1;position: relative;top: 36px;height: 340px; }
+#box_login #frm_login .has-float-label span { font-size: 120%; left: 76.5px; }
+
+
+#box_login input {
+    width: 200px;
+    color: #fff;
+    font-size: 18px;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    position: absolute;
+    left: 50%;
+    margin-left: -109px;
+    top: 53%;
+    padding: 9px;
+    text-align: left;
+    opacity: 0;
+}
+#box_login input.eLogin { opacity: 1; }
+#box_login input.eRecover { opacity: 1; }
+
+#box_login #btn_goregister {
+    color: #fff;
+    background: transparent;
+    position: relative;
+    float: left;
+    top: 90%;
+    display: inline-block;
+    font-size: 12px;
+    left: 50%;
+    margin-left: -35.5px;
+    letter-spacing: .9px;
+    opacity: 0;
+}
+#box_login #btn_go, 
+#box_login #btn_sendrecover, 
+#box_login #btn_sendregister, 
+#box_login #btn_sendreanimation, 
+#box_login #btn_gologin {
+    border: 1px solid #2d4f8e;
+    /* background: #117EEE; */
+    background: #000064;
+    position: absolute;
+    top: 75.2%;
+    display: inline-block;
+    
+    left: 50%;
+    margin-left: -65px;
+    letter-spacing: .9px;
+    padding: 9px 30px;
+    border-radius: 36px;
+    box-shadow: 1px 2px 4px rgba(0,0,0,.1);
+    
+    border: 0;
+    color: #fff;
+    font-family: mysanslight;
+    padding: 14.4px 34px 7px 34px; 
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0;
+}
+#box_login #btn_sendrecover, #box_login #btn_sendregister {
+    opacity: 1; 
+}
+#box_login #btn_go {  position: relative; top: 72%; width: 144px; margin-left: -106px; }
+#box_login #btn_sendrecover { left: 69%; padding: 21.6px 36px; top: 72%; }
+#box_login #btn_sendregister { top: 70%; margin-left: -111px;  }
+#box_login #btn_sendreanimation { top: 66%; margin-left: -125px; z-index: 99; }
+#box_login #btn_gologin {     
+    background: transparent;
+    border: 2px solid #fff;
+    opacity: 1;
+    box-shadow: none;
+    left: 29%;
+    padding: 12px 34px;
+    top: 75.3%; 
+}
+
+#box_login {
+    /*background-color: #cfa127;*/
+    background-color: #202a29;
+    display: block;
+    float: left;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+}
+#box_login .title {         
+    position: relative;
+    top: 25%;
+    left: 0;
+    font-size: 30px;
+    letter-spacing: 0;
+    width: 100%;
+    font-family: mysansbold;
+    text-align: center;
+    margin: 0; 
+    opacity: 0; 
+}
+#box_login .title.eRegister,
+#box_login .title.eRecover {
+    width: 201px;
+    left: 50%;
+    margin-left: -95px;
+    margin-top: -1px;
+}
+#box_login .title.eRegister, #box_login .title.eRecover { width: 100%; left: 0; margin: 0; opacity: 1; }
+
+#box_login .help, #box_login .goback {
+    display: block;
+    position: relative;
+    text-align: center;
+    font-size: 10px;
+    left: 0;
+    width: 100%;
+    top: 81%;
+    font-family: Verdana;
+    color: #fff;
+    opacity: 0;
+    float: left;
+}
+#box_login .help a, #box_login .goback {
+    margin-top: 3px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'mysanslight';
+    letter-spacing: 1.6px;
+}
+#box_login .help a:hover { font-weight: 900; color: #333; }
+#box_login .goback, #box_login .goback a { opacity: 1; color: #eee!important; }
+#box_login .help.eRecover {     
+    text-align: center;
+    width: 207px;
+    margin: 45px 15%;
+    bottom: auto;
+    top: 25%;
+    margin-left: -100px;
+    left: 50%;
+    font-family: 'mysanslight';
+    font-size: 12px;
+    letter-spacing: 0.9px;
+    line-height: 21px; }
+
+#box_login .msgbox { text-align: center; background-color: #cfa127; z-index: 999999; 
+                        position: absolute; top: 36%; width: 100%; padding: 20px 0; height: 115px }
+#box_login .msgbox i { font-size: 38.1px; }
+#box_login .msgbox h4 { margin: 2.7px; padding: 0 16%; margin-top: -20px; font-family: GothamMedium; }
+#box_login .msgbox span { font-size: 12px; font-weight: 600; }
+
+#box_login .eRecover {  }

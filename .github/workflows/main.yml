@@ -1,0 +1,67 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main-standby
+
+jobs:
+  build:
+    name: Build MVC
+    runs-on: windows-2022
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v2
+
+      - name: Restore Packages
+        run: nuget restore haylie.sln
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Build & Publish
+        run: >
+          msbuild haylie.sln
+          /p:Configuration=Release
+          /p:DeployOnBuild=true
+          /p:WebPublishMethod=FileSystem
+          /p:DeleteExistingFiles=true
+          /p:publishUrl="${{ github.workspace }}\publish"
+
+      - name: Upload Published Site
+        uses: actions/upload-artifact@v4
+        with:
+          name: website
+          path: publish
+
+  deploy:
+    name: FTP Deploy
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download Publish
+        uses: actions/download-artifact@v4
+        with:
+          name: website
+          path: publish
+
+      - name: FTP Deploy - sandbox
+        uses: locaweb/ftp-deploy@1.0.0
+        with:
+          host: ${{ secrets.FTP_HOST_SAND }} 
+          user: ${{ secrets.FTP_USER_SAND }}
+          password: ${{ secrets.FTP_PASSWORD_SAND }}
+          localDir: "publish"
+          remoteDir: "web"
+
+      - name: Overrides
+        uses: microsoft/variable-substitution@v1
+        with:
+          files: 'web/web.config'
+        env:
+          appSettings.service_token: ${{ secrets.PAT_GIT_SAND }}
