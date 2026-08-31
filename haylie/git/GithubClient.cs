@@ -5,7 +5,10 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Configuration;
 using haylie.git;
+using haylie.git.dtos;
+using haylie.git.interfaces;
 
 namespace haylie.git.services { 
 
@@ -18,7 +21,11 @@ namespace haylie.git.services {
             if (options == null)
                 throw new ArgumentNullException(nameof(options));
 
-            if (string.IsNullOrWhiteSpace(options.Token))
+            var token = options.Token;
+            if (string.IsNullOrWhiteSpace(token))
+                token = ConfigurationManager.AppSettings["service_token"];
+
+            if (string.IsNullOrWhiteSpace(token))
                 throw new ArgumentException(
                     "GitHub token is required.",
                     nameof(options));
@@ -44,7 +51,7 @@ namespace haylie.git.services {
             _httpClient.DefaultRequestHeaders.Authorization =
                 new AuthenticationHeaderValue(
                     "Bearer",
-                    options.Token);
+                    token);
         }
 
         public Task<GitHubUser> GetAuthenticatedUserAsync(

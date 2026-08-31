@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using haylie.git;
+using haylie.git.dtos;
 
 namespace haylie.git.interfaces {
 
