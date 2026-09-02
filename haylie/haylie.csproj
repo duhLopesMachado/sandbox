@@ -181,6 +181,8 @@
     <Compile Include="git\GithubClient.cs" />
     <Compile Include="git\IGithubClient.cs" />
     <Compile Include="git\git-base.cs" />
+    <Compile Include="DTOs\CheckoutRequest.cs" />
+    <Compile Include="DTOs\GithubDTO.cs" />
     <Compile Include="Controllers\GitController.cs" />
   </ItemGroup>
   <ItemGroup>
